@@ -1,3 +1,4 @@
+"use client"
 import BlogForm from '@/components/BlogForm'
 import DashboardLayout from '@/components/dashboard/DashboardLayout'
 import axios from 'axios';

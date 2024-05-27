@@ -1,3 +1,4 @@
+"use client"
 import Spinner from '@/components/Spinner';
 import { Avatar, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';

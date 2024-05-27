@@ -1,9 +1,10 @@
+"use client"
 import { Button } from '@/components/ui/button'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
-const login = () => {
+const Login = () => {
   const {data: session} = useSession()
   const router = useRouter();
   useEffect(()=>{
@@ -31,4 +32,4 @@ const login = () => {
   </>
 }
 
-export default login
+export default Login

@@ -1,3 +1,4 @@
+"use client"
 import {SquareDot } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Input } from "./ui/input";
