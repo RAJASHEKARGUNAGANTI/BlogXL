@@ -23,6 +23,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../ui/alert-dialog";
+import Image from "next/image";
 
 const DashboardContent = () => {
   const { data: session } = useSession();
@@ -95,7 +96,8 @@ const deleteBlog = async()=>{
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <img
+              <Image
+              width={40} height={40}
                 src={blog.images[0]}
                 alt="blog image"
                 className="h-40 w-full rounded-md object-cover object-center"

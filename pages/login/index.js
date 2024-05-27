@@ -1,6 +1,7 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import { signIn, useSession } from 'next-auth/react'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
@@ -27,7 +28,7 @@ const Login = () => {
     (<Button variant='custom' onClick={() => signIn("google")} >Continue with google</Button>)
   }
   </div>
-  <img src="/login.jpg" alt="Photo"  className=' object-cover max-w-xl mx-auto'/>
+  <Image width={1000} height={1000} src="/login.jpg" alt="Photo"  className=' object-cover max-w-xl mx-auto'/>
   </section>
   </>
 }

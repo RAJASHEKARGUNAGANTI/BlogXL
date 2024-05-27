@@ -11,6 +11,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import Spinner from "./Spinner";
 import {ReactSortable} from "react-sortablejs";
+import Image from "next/image";
 
 const ReactQuill = dynamic(() => import("react-quill"), {
   ssr: false,
@@ -149,7 +150,7 @@ const BlogForm = (
             >
             {Array.isArray(images) && images.map((link,index)=>(
               <div className="relative" key={link}>
-              <img src={link} alt="blog Images" className="object-cover h-full w-full rounded-md border p-2
+              <Image width={20} height={20} src={link} alt="blog Images" className="object-cover h-full w-full rounded-md border p-2
               cursor-pointer transition-transform transform-gpu duration-300 group-hover:scale-110 " />
               <div className="absolute top-3 right-3 cursor-pointer opacity-100">
               <Button onClick={()=> handleDeleteImage(index)} >
