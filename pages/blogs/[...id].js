@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import axios from 'axios';
 import { MoveLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react'
@@ -55,7 +56,7 @@ const [blogInfo, setBlogInfo] = useState(null);
     </div>
     </div>
     <div className="col-span-2 border-l border-gray-300 sm:ml-[380px] w-full">
-    <img src={blogInfo?.images[0]} alt=""  className='border-b-gray-400 p-4 rounded-3xl object-center ' />
+    <Image src={blogInfo?.images[0]} alt=""  className='border-b-gray-400 p-4 rounded-3xl object-center ' />
     <div className="list-disc mb-4 ml-3 p-4 mt-4 " dangerouslySetInnerHTML={{__html: blogInfo?.description}} ></div>
     </div>
     </div>
