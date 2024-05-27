@@ -38,7 +38,7 @@ const DashboardContent = () => {
         const response = await axios.get("/api/blogs");
         // console.log(response)
         const userBlogs = response.data.filter(
-          (blog) => blog.user.id === session.user.id
+          (blog) => blog?.user?.id === session?.user?.id
         );
         setBlogs(userBlogs);
         setLoading(false);

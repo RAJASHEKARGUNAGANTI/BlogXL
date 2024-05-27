@@ -1,9 +1,10 @@
-import { SquareDot } from "lucide-react";
+import {SquareDot } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { Input } from "./ui/input";
 import axios from "axios";
 import { Skeleton } from "./ui/skeleton";
 import Link from "next/link";
+import Image from "next/image";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -25,7 +26,7 @@ const Blogs = () => {
       blog.type.toLowerCase().includes(search.toLowerCase()) ||
       blog.user.name.toLowerCase().includes(search.toLowerCase())
   );
-
+// console.log(filterBlogs)
   return (
     <>
       <header className="border-b mb-3">
@@ -62,23 +63,26 @@ const Blogs = () => {
         </div>
       )}
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8 md:grid-cols-3">
-        {filterBlogs.map(blog => (
+        {filterBlogs.map((blog, index) => (
           <div
             className="relative overflow-hidden rounded-lg shadow-lg border transition hover:shadow-xl "
-            key={blog.id}
+            key={blog.id || index}
           >
             <Link href={"/blogs/" + blog._id}>
               <div className="h-[210px] ">
-                <img
+                <Image
+                  width={270}
+                  height={80}
                   alt="blog image"
                   src={blog?.images[0]}
-                  className=" h-56 w-full object-fill rounded-t-lg"
+                  className=" object-fill rounded-t-lg"
                   layout="responsive"
                   quality={100}
                 />
               </div>
               <div className="flex items-center gap-x-2 px-4 mt-6">
-              <img src={blog?.user?.image} alt="user image" className="h-8 w-8 rounded-full" />
+              <Image width={20}
+              height={20} src={blog?.user?.image} alt="user image" className="h-8 w-8 rounded-full" />
               <h3 className="text-base font-semibold leading-7 tracking-tight">
               {blog.user.name}
               </h3>
