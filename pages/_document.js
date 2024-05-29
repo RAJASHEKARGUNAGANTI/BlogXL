@@ -44,6 +44,7 @@ class MyDocument extends Document {
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
         <meta name="twitter:image" content={metadata.twitter.image} />
+        <meta property="og:image" content="/opengraph-image.png" />
       </Head>
         
         <body>
