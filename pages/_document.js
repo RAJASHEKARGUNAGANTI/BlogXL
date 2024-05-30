@@ -28,9 +28,9 @@ export const metadata = {
   description: "Come and write blogs in BlogXL",
   twitter: {
     card: "summary_large_image",
-    title:"Blog XL - let's write a blog",
-    description: "Come and write blog",
-    image:"../public/opengraph-image.png"
+    title:"Blog XL - let's write a blogXL",
+    description: "Come and write blog in BlogXL to exceel your Technical Knowledge",
+    image:"/opengraph-image.png"
   }
 };
 
