@@ -97,7 +97,7 @@ const deleteBlog = async()=>{
             </CardHeader>
             <CardContent>
               <Image
-              width={40} height={40}
+              width={400} height={400}
                 src={blog.images[0]}
                 alt="blog image"
                 className="h-40 w-full rounded-md object-cover object-center"

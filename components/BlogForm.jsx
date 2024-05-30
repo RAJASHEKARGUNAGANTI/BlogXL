@@ -87,7 +87,7 @@ const BlogForm = (
 
         uploadImageQueue.push(
           axios.post('/api/upload', data).then(res =>{
-            setImages(oldImags =>[...oldImags, ...res.data.links])
+            setImages(res.data.links)
           })
         )
       }
@@ -95,6 +95,7 @@ const BlogForm = (
       setIsUploading(false);
     }
   }
+  console.log("image added "+images)
 
   async function createBlog(ev){
     ev.preventDefault();
@@ -150,7 +151,7 @@ const BlogForm = (
             >
             {Array.isArray(images) && images.map((link,index)=>(
               <div className="relative" key={link}>
-              <Image width={20} height={20} src={link} alt="blog Images" className="object-cover h-full w-full rounded-md border p-2
+              <Image width={300} height={300} src={`${link}`} alt="blog Images" className="object-cover h-full w-full rounded-md border p-2
               cursor-pointer transition-transform transform-gpu duration-300 group-hover:scale-110 " />
               <div className="absolute top-3 right-3 cursor-pointer opacity-100">
               <Button onClick={()=> handleDeleteImage(index)} >

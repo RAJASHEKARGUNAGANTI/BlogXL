@@ -5,7 +5,7 @@ import React from "react";
 
 export const metadata = {
   title: "Dashboard - BlogXL",
-  description: "Dashboard description",
+  description: "Dashboard can use to add new blogs and edit or delete them",
 };
 
 const Dashboard = () => {
