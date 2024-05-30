@@ -41,6 +41,7 @@ class MyDocument extends Document {
         
         <Head>
         <title>{metadata.title.default}</title>
+        <meta name="google-site-verification" content="AuzeEqkoTaTjqNQ0hYZmFpGRA8PDb1ebp6uYqf3MQN8" />
         <meta name="description" content={metadata.description} />
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:site" content={metadata.twitter.site} />
