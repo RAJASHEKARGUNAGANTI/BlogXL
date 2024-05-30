@@ -27,7 +27,7 @@ const BlogPage = () => {
       setLoading(false);
     });
   }, [id]);
-
+// const dis = { __html: blogInfo?.description};
   if (loading) {
     return (
       <>
@@ -41,7 +41,7 @@ const BlogPage = () => {
     <>
     <Head>
         <title>{blogInfo?.title} - BlogXL</title>
-        <meta name="description" content={blogInfo?.description} />
+        <meta name="description" content={blogInfo?.description ? blogInfo.description.replace(/(<([^>]+)>)/gi, "") : ""} />
       </Head>
       <div className="mx-auto px-4 sm:px-6 ld:px-8 mt-10 ">
         <section className="pb-24 pt-6 ">
