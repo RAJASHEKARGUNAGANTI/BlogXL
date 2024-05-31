@@ -21,7 +21,7 @@ const DashboardHeader = () => {
       <>
       <div className="flex justify-between items-center">
       </div> 
-        <aside className={` fixed z-40 w-80 h-auto`}>
+        <aside className={` lg:fixed md:fixed  lg:z-40 md:z-40 w-80 h-auto`}>
           <div className="h-full px-3 py-4 overflow-auto bg-gray-50">
             <ul className="space-y-2 font-medium">
               <li>

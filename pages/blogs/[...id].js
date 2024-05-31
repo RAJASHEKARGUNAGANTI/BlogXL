@@ -44,9 +44,9 @@ const BlogPage = () => {
         <meta name="description" content={blogInfo?.description ? blogInfo.description.replace(/(<([^>]+)>)/gi, "") : ""} />
       </Head>
       <div className="mx-auto px-4 sm:px-6 ld:px-8 mt-10 ">
-        <section className="pb-24 pt-6 ">
-          <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 ">
-            <div className="lg:block fixed top-36">
+        <section className="pb-24 pt-6 flex-col ">
+          <div className="lg:grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3 sm:flex-col ">
+            <div className="lg:block lg:fixed sm:fixed md:top-32 lg:top-36">
               <Link
                 href={"/"}
                 className="flex text-md items-center mb-3 text-gray-500 "
@@ -83,7 +83,7 @@ const BlogPage = () => {
                 className="border-b-gray-400 p-4 rounded-3xl object-center "
               />
               <div
-                className="list-disc mb-4 ml-3 p-4 mt-4 "
+                className="list-disc mb-4 ml-3 p-4 mt-4 text-xl "
                 dangerouslySetInnerHTML={{ __html: blogInfo?.description }}
               ></div>
             </div>

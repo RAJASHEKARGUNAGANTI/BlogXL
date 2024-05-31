@@ -76,7 +76,7 @@ const deleteBlog = async()=>{
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-center items-center">
         <Card
           className="w-[320px] h-auto bg-gray-100 cursor-pointer mb-3 hover:bg-white"
           onClick={() => {
