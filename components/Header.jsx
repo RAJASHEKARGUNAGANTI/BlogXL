@@ -21,7 +21,7 @@ const Header = () => {
               <GiElephant className="text-3xl" />
             </Badge>
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
-              BolgXL
+              BlogXL
             </span>
           </Link>
           <div className="hidden w-full md:flex justify-between items-center space-x-8 md:w-auto"></div>
