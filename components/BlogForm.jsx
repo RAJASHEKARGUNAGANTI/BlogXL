@@ -132,7 +132,7 @@ const BlogForm = (
             <option value="Technical">Technical</option>
             <option value="Non-technical">Non-Technical</option>
           </select>
-          <Input type="url" placeholder="Deploymen URL" value={deploymentLink} onChange={(e)=> setDeploymentLink(e.target.value)}/>
+{/*           <Input type="url" placeholder="Deploymen URL" value={deploymentLink} onChange={(e)=> setDeploymentLink(e.target.value)}/> */}
         </div>
         <div className="w-full items-center gap-2">
           <Label>Blog Images</Label>
